@@ -1,0 +1,170 @@
+body {
+    align-items: center;
+    max-width: max-content;
+    margin: auto;
+    background-color: rgb(108, 141, 164);
+}
+
+.main {
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 3px solid black;
+    background: url("https://www.adventurebikerider.com/wp-content/uploads/2017/10/tumblr_o27c7fByaO1tchrkco1_500.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+.main .left,
+.main .right {
+    width: 45%;
+    height: 95%;
+    background-color: rgb(55, 103, 135);
+    background-image: linear-gradient(to top, rgb(15, 128, 148), rgb(38, 85, 113), rgb(53, 178, 162));
+    margin: 10px;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: -2px -2px 5px rgb(55, 123, 135);
+}
+
+.header,
+.input,
+.button {
+    text-align: center;
+}
+
+
+.input input {
+    margin-top: 10%;
+    width: 90%;
+    height: 40px;
+    border: 2px outset rgb(24, 21, 65);
+    border-radius: 30px;
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+.button button {
+    margin: 10px;
+    height: 40px;
+    width: 40%;
+    border: 0px;
+    border-radius: 15px;
+    background-color: rgb(24, 21, 65);
+    color: white;
+    font-size: 25px;
+}
+
+.button button:active {
+    transform: translate(2px, 2px);
+    /* height: 50px; */
+}
+
+
+.header p {
+    font-size: 50px;
+    /* font-size: min(30px, 40px); */
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(24, 21, 65);
+}
+
+.right {
+    text-align: justify;
+}
+
+@keyframes Move {
+    100% {
+        rotate: 360deg;
+    }
+}
+
+.temp {
+    height: 30%;
+    justify-content: space-around;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(76, 145, 162);
+    opacity: 0.8;
+    border: 5px solid rgb(24, 21, 65);
+    border-radius: 20px;
+    box-shadow: 2px 2px 30px;
+}
+
+#city {
+    color: rgb(24, 21, 65);
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    font-style: italic;
+}
+
+.second {
+    display: flex;
+    height: 50%;
+    justify-content: space-around;
+}
+
+.second #temp {
+    width: 50%;
+    text-align: center;
+    font-size: 3em;
+    position: relative;
+    bottom: 50%;
+    font-style: italic;
+    max-width: max-content;
+}
+
+.image img {
+    width: 100%;
+    height: 70%;
+    /* height: 300px; */
+    /* border: 2px solid rgb(24, 21, 65); */
+    bottom: 2px;
+    position: relative;
+    /* border-radius: 4px; */
+}
+
+.image .description {
+    width: 100%;
+    position: relative;
+    top: -20px;
+    height: 50%;
+    color: rgb(24, 21, 65);
+    text-align: end;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.image {
+    max-width: max-content;
+}
+
+.lower {
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.wind,
+.humidity {
+    height: 50%;
+    width: 40%;
+    background-color: rgb(76, 145, 162);
+    margin-top: 13%;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 30px;
+    border: 5px solid rgb(24, 21, 65);
+    border-radius: 20px;
+    text-align: center;
+    /* font-size: 0px; */
+}
+
+.lower p {
+    font-size: 20px;
+}

@@ -6,226 +6,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <style>
-        body {
-            background-color: rgb(197, 126, 187);
-        }
-
-        .head {
-            position: relative;
-            top: -15px;
-            background-image: url("first_image.jpg");
-        }
-
-        .list ul {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: space-around;
-        }
-
-        li {
-            margin: 10px;
-            list-style-type: none;
-            border: 2px solid rgb(85, 29, 67);
-            padding: 2px;
-            border-radius: 6px;
-            padding: 10px;
-            text-align: center;
-            width: 100px;
-            cursor: pointer;
-            font-size: 22px;
-            box-shadow: 2px 2px 2px rgb(230, 44, 168);
-        }
-
-        li:active{
-            transform: translate(1px, 1px );
-        }
-
-        .name {
-            top: 100px;
-            position: relative;
-            text-align: center;
-        }
-
-        .name p {
-            font-size: 40px;
-            font-weight: bold;
-            font-style: oblique;
-        }
-
-        .face {
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            top: 100px;
-
-        }
-
-        .face img {
-            box-shadow: 2px -1px 5px black;
-        }
-
-        .face img {
-            width: 200px;
-            height: 200px;
-            border: 2px solid black;
-            border-radius: 100px;
-        }
-
-        .para {
-            position: relative;
-            top: 150px;
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-
-        .charts {
-            position: relative;
-            top: 200px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .inner-div {
-            display: flex;
-        }
-
-        .charts {
-            background-color: rgb(128, 73, 120);
-            box-shadow: 1px -2px 5px rgb(128, 73, 120);
-            height: 200px;
-            padding: 20px;
-            border: 0px solid black;
-            border-radius: 30px;
-        }
-
-        .inner-div div {
-            background: linear-gradient(to right,
-                    red 70%,
-                    rgb(197, 126, 187) 0%,
-                    rgb(197, 126, 187) 100%);
-            height: 20px;
-            width: 100px;
-            border: 4px solid black;
-            margin: 10px;
-            border-radius: 20px;
-        }
-
-        .inner-div span {
-            position: relative;
-            top: 15px;
-        }
-
-        .charts h3 {
-            position: absolute;
-            font-style: italic;
-            top: -63px;
-            left: 45vw;
-            font-size: 30px;
-            color: rgb(70, 26, 71);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="head">
-        <div class="list">
-            <ul>
-                <li class="home">Home</li>
-                <li class="about" onclick="GoAbout()">About</li>
-                <li class="skills" onclick="GoSkills()">Skills</li>
-                <li class="experience">Experience</li>
-                <li class="education">Education</li>
-                <li class="portfolio">Portfolio</li>
-                <li class="contact">Contact</li>
-            </ul>
-        </div>
+    <div class="main">
+        <div class="left">
+            <div class="header">
+                <p>Weather App</p>
+            </div>
+            <div class="input">
+                <input type="text" id="t">
+            </div>
 
-        <div class="name">
-            <p>Shubham Kumar</p>
+            <div class="button">
+                <button onclick="Fetch()">Search</button>
+            </div>
         </div>
+        <div class="right" id="right">
+            <div class="temp">
+                <div id="city">City Name</div>
+                <div class="second">
+                    <p id="temp">None</p>
+                    <div class="image">
+                        <img src="http://openweathermap.org/img/w/10d.png" alt="image" id="image">
+                        <p class="description" id="description">None</p>
+                    </div>
+                </div>
+            </div>
 
-        <div class="face">
-            <img src="face.jpg">
-        </div>
-    </div>
+            <div class="lower">
+                <div class="wind">
+                    <h2>Wind Speed</h2>
+                    <p id="wind"></p>
+                </div>
+                <div class="humidity">
+                    <h2>Humidity</h2>
+                    <p id="hum"></p>
+                </div>
+            </div>
 
-    <div class="para" id="ABOUT">
-        <p style="text-align: justify; background-color: rgb(185, 106, 170);">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, omnis in quasi odio, enim necessitatibus
-            dolorum reprehenderit quibusdam recusandae consectetur consequatur velit nostrum. Cum rem, ad doloremque
-            voluptates facilis quasi, accusamus nam ipsum dolorem consectetur facere placeat dolore alias quisquam
-            suscipit laudantium cupiditate aut similique beatae officiis quam sit. Velit possimus, ab eaque voluptates
-            saepe tempora eum facilis quasi, deleniti ducimus odit praesentium modi asperiores harum, porro alias
-            distinctio repellat rem nulla exercitationem eveniet ad culpa! Culpa aliquid illum obcaecati excepturi
-            doloribus, non expedita earum, dolores laudantium pariatur cumque ab vitae, in distinctio amet illo quam a
-            unde hic. Veritatis corporis mollitia ad. Nisi itaque exercitationem dolorem aperiam repellendus, qui
-            tenetur similique earum dolor magni quo ut vero? Dolorem est temporibus blanditiis provident fugit suscipit
-            repellendus laboriosam autem odio, natus et, laborum eaque minima dignissimos iure pariatur omnis quaerat
-            nemo possimus porro, molestias labore! Ipsa optio perferendis a tenetur unde ducimus voluptatum. Ad ratione
-            alias nostrum velit ex veritatis itaque non, doloremque, quas similique id reprehenderit unde dolorum cumque
-            eum! Unde odit corrupti incidunt ipsam ab suscipit quod atque quibusdam inventore, iste accusamus!
-            Accusantium ad odit quibusdam exercitationem nesciunt expedita, impedit, voluptate alias, maxime eius
-            provident. Quo dolore doloribus et!
-        </p>
-    </div>
-
-    <div class="charts" id="SKILLS">
-        <h3>Skills</h3>
-        <div class="inner-div">
-            <span>HTML</span>
-            <div></div>
-        </div>
-        <div class="inner-div">
-            <span>HTML</span>
-            <div></div>
-        </div>
-        <div class="inner-div"><span>HTML</span>
-            <div></div>
-        </div>
-        <div class="inner-div"><span>HTML</span>
-            <div></div>
-        </div>
-        <div class="inner-div"><span>HTML</span>
-            <div></div>
-        </div>
-        <div class="inner-div"><span>HTML</span>
-            <div></div>
-        </div>
-        <div class="inner-div"><span>HTML</span>
-            <div></div>
-        </div>
-        <div class="inner-div"><span>HTML</span>
-            <div></div>
-        </div>
-        <div class="inner-div"><span>HTML</span>
-            <div></div>
-        </div>
-        <div class="inner-div"><span>HTML</span>
-            <div></div>
-        </div>
-        <div class="inner-div"><span>HTML</span>
-            <div></div>
-        </div>
-        <div class="inner-div"><span>HTML</span>
-            <div></div>
         </div>
     </div>
 
     <script>
-        function GoSkills() {
-            window.location.href = "#SKILLS";
-        }
+        async function Fetch() {
 
-        function GoAbout() {
-            window.location.href = "#ABOUT";
+            var ele = document.getElementById("right");
+            ele.style.height = "5%";
+            ele.style.top = "40%";
+            ele.style.width = "40%";
+            ele.style.position = "relative";
+            ele.style.borderRadius = "30px";
+            ele.style.animation = "Move 0.5s infinite";
+
+            document.getElementById("temp").innerHTML = "";
+            document.getElementById("city").innerHTML = "";
+            document.getElementById("description").innerHTML = "";
+            document.getElementById("image").src = "";
+
+            var city = document.getElementById("t").value;
+            document.getElementById("t").value = "";
+            city = city[0].toUpperCase() + city.slice(1);
+
+            console.log(city);
+
+
+            let promise = fetch(`https://api.openweathermap.org/data/2.5/weather?q= ${city} &appid=6eb6ed197c29992974308d632554c5f4`)
+
+            promise.then((response) => {
+                ele.style.height = "95%";
+                ele.style.width = "50%";
+                ele.style.removeProperty("top");
+                ele.style.removeProperty("position");
+                ele.style.removeProperty("animation");
+
+                setTimeout(() => {
+
+                }, 10000);
+                return response.json();
+            }).then((data) => {
+                var temp = data["main"]['temp'] - 273.15;
+                temp = parseFloat(temp).toFixed(2);
+
+                document.getElementById("temp").innerHTML = temp + "°C";
+                document.getElementById("city").innerHTML = city;
+                document.getElementById("image").src = `http://openweathermap.org/img/w/${data['weather'][0]['icon']}.png`;
+                document.getElementById("description").innerHTML = data['weather'][0]['description'];
+                document.getElementById("hum").innerHTML = data['main']['humidity'] + " g.m-3";
+                document.getElementById("wind").innerHTML = data['wind']['speed'] + " Km/hr";
+
+                let newdata = JSON.stringify(data, {}, 4);
+                console.log(newdata);
+            })
         }
     </script>
-
 </body>
 
 </html>
